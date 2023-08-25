@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="center-align white-text">Register</h3>
+
+<div class="row">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+      <div class="card-panel">
+        <!----username---->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-user-plus prefix grey-text text-darken-4"></i>
+                <input id="username" name="username" type="text" class="validate">
+                <label for="username"> username</label>
+              </div>
+            </div>
+            <!---password--->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fa-solid fa-user-lock prefix grey-text text-darken-4"></i>
+                <input id="password" name="password" type="password" class="validate">
+                <label for="password">Password</label>
+                </div>
+            </div>
+            <!---register---->
+            <div class="row">
+                <buuton type="submit" class="col s12 btn-large deep-orange darken-4 text-shadow">
+                Register<i class="fa-solid fa-circle"></i></buuton>
+            </div>
+
+    </form>
+  </div>
+
+
+
+{% endblock %}

@@ -25,9 +25,9 @@
                 <li><a href="#">Profile</a></li>
                 <li><a href="#">New Book</a></li>
                 <li><a href="#">Manage Categories</a></li>
-                <li><a href="#">Sing Out/a></li>
+                <li><a href="#">Sing Out</a></li>
                 <li><a href="#">Log In</a></li>
-                <li><a href="#">Register</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
               
               </ul>
             </div>
@@ -41,16 +41,14 @@
                 <li><a href="#">Manage Categories</a></li>
                 <li><a href="#">Sing Out/a></li>
                 <li><a href="#">Log In</a></li>
-                <li><a href="#">Register</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
               
           </ul>
     </header>
+
  {% block content %}
  {% endblock%}
 
-    <div class="background">
-        <img src="https://images.unsplash.com/photo-1524578271613-d550eacf6090?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80">
-    </div>
     
 
 
