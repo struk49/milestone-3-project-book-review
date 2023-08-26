@@ -22,7 +22,7 @@
               <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fa-solid fa-bars"></i></a>
               <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('home') }}">Homw</a></li>
-                <li><a href="#">Profile</a></li>
+                <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                 <li><a href="#">New Book</a></li>
                 <li><a href="#">Manage Categories</a></li>
                 <li><a href="#">Sing Out</a></li>
@@ -34,9 +34,9 @@
           </nav>
         <!----mobile sidebar---->
           <ul class="sidenav" id="mobile-demo">
-                <li><h4 class="centre-align brown-text text-darken-4">Book Reviews</h4></li>
+                <li><h4 class="centre-align grey-text text-darken-4">Book Reviews</h4></li>
                 <li><a href="{{ url_for('home') }}">Homw</a></li>
-                <li><a href="#">Profile</a></li>
+                <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                 <li><a href="#">New Book</a></li>
                 <li><a href="#">Manage Categories</a></li>
                 <li><a href="#">Sing Out/a></li>
