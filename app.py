@@ -65,7 +65,7 @@ def signin():
         if existing_user:
             # ensure hashed password matches user input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
+                    existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(
                     request.form.get("username")))
@@ -82,6 +82,7 @@ def signin():
             return redirect(url_for("login"))
 
     return render_template("signin.html")
+
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
@@ -101,8 +102,6 @@ def signout():
     flash("You have been signed out")
     session.pop("user")
     return redirect(url_for('signin'))
-
-
 
 
 if __name__ == "__main__":
