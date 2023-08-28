@@ -6,6 +6,18 @@
 
     <div class="row card-panel white">
         <form class="col s12" method="POST" action="">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fa-solid fa-folder-open prefix grey-text text darken-4"></i>
+                    <select id="category_name" name="category_name" class="validate" required>
+                      <option value="" disabled selected>Choose Category</option>
+                      {% for category in categories %}
+                      <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                      {% endfor %}
+                    </select>
+                    <label for="category_name">Book Category</label>
+                  </div>
+            </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-pencil prefix grey-text text darken-4"></i>
