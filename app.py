@@ -124,6 +124,11 @@ def add_book():
     return render_template("add_book.html",  categories=categories)
 
 
+@app.route("/add_review")
+def add_review():
+    return render_template("add_review.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
