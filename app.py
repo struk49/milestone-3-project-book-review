@@ -119,14 +119,22 @@ def add_book():
         flash("Book successfully added")
         return redirect(url_for("home"))
 
-
-    categories = mongo.db.categories.find().sort("category_name",1)
+    categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_book.html",  categories=categories)
 
 
-@app.route("/add_review")
+@app.route("/add_review", methods=["GET", "POST"])
 def add_review():
+    if request.method == "POST":
+        review = {
+            "review": request.form.get("review"),
+            "created_by": session["user"]
+        }
+        mongo.db.review.insert_one(review)
+        flash("Review Successfully Added")
+        return redirect(url_for("home"))
     return render_template("add_review.html")
+
 
 
 if __name__ == "__main__":
