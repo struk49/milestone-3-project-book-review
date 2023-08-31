@@ -112,7 +112,9 @@ def add_book():
             "title": request.form.get("title"),
             "author": request.form.get("author"),
             "book_description": request.form.get("book_description"),
-            "created_by": session['user']
+            "created_by": session['user'],
+            "reviews": request.form.get("reviews")
+        
         }
 
         mongo.db.books.insert_one(book)
@@ -126,12 +128,13 @@ def add_book():
 @app.route("/add_review", methods=["GET", "POST"])
 def add_review():
     if request.method == "POST":
-        review = {
-            "review": request.form.get("review"),
-            "created_by": session["user"]
+        reviews = {
+            "reviews": request.form.get("reviews")
+        
         }
-        mongo.db.review.insert_one(review)
-        flash("Review Successfully Added")
+
+        mongo.db.review.insert_one(reviews)
+        flash("Review successfully added")
         return redirect(url_for("home"))
     return render_template("add_review.html")
 
