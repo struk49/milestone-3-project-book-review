@@ -2,10 +2,10 @@
 {% block content %}
 
     <h3 class="white-text grey darken-4
-    center-align ">Add Book</h3>
+    center-align ">Edit Book</h3>
 
     <div class="row card-panel white">
-        <form class="col s12" method="POST" action="{{ url_for('add_book') }}">
+        <form class="col s12" method="POST" action="{{ url_for('edit_book', book_id=book._id) }}">
             <!---category selection---->
             <div class="row">
                 <div class="input-field col s12">
@@ -55,7 +55,7 @@
           <div class="row">
             <div class="col s12 center-align">
                 <button type="submit" class="btn-large deep-orange darken-3 text-shadow">
-                    Add Book <i class="fas fa-plus-square right"></i>
+                    EDit Book <i class="fas fa-plus-square right"></i>
                 </button>
             </div>
         </div>

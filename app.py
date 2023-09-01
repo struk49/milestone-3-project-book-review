@@ -125,19 +125,12 @@ def add_book():
     return render_template("add_book.html",  categories=categories)
 
 
-@app.route("/add_review", methods=["GET", "POST"])
-def add_review():
-    if request.method == "POST":
-        reviews = {
-            "reviews": request.form.get("reviews")
-        
-        }
+@app.route("/edit_book/<book_id>", methods=["GET", "POST"])
+def edit_book(book_id):
+    book = mongo.db.books.find_one({'_id': ObjectId(book_id)})
 
-        mongo.db.review.insert_one(reviews)
-        flash("Review successfully added")
-        return redirect(url_for("home"))
-    return render_template("add_review.html")
-
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_book.html", book=book, categories=categories)
 
 
 if __name__ == "__main__":
