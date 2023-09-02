@@ -128,6 +128,20 @@ def add_book():
 def edit_book(book_id):
     book = mongo.db.books.find_one({'_id': ObjectId(book_id)})
 
+    if request.method == "POST":
+        submit = {
+            "category_name": request.form.get("category_name"),
+            "title": request.form.get("title"),
+            "author": request.form.get("author"),
+            "book_description": request.form.get("book_description"),
+            "created_by": session['user'],
+        
+        }
+
+        mongo.db.books.update_one({"_id": ObjectId(book_id)}, {"$set": submit})
+        flash("Book successfully updated")
+
+    book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_book.html", book=book, categories=categories)
 
