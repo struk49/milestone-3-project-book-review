@@ -113,7 +113,6 @@ def add_book():
             "author": request.form.get("author"),
             "book_description": request.form.get("book_description"),
             "created_by": session['user'],
-            "reviews": request.form.get("reviews")
         
         }
 
