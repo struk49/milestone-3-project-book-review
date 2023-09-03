@@ -12,7 +12,6 @@ center-align "> All Books</h3>
         <div class="col s3">
             <i class="fas fa-caret-down"></i>
             {% if session.user|lower == book.created_by|lower %}
-            <a href="" class="btn-small deep-orange darken-4">add review</a>
             <a href="{{ url_for('edit_book', book_id=book._id)}}" class="btn-small grey darken-4">Edit</a>
             {% endif %}
             <strong>{{ book.title }}</strong> : {{ book.author }} </strong>
@@ -23,7 +22,10 @@ center-align "> All Books</h3>
             <strong>{{ book.category_name }}</strong>
             <p>{{ book.book_description }}</p>
             <p><em> Book added By: {{ book.created_by }}</em></p>
-        </div>
+           <br>
+           <h1#>Review </h1>
+            <p>{{- book.reviews }}</p> 
+            <p>{{- book.created_by}}</p>
     </li>
     {% endfor %}
 </ul>

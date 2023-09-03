@@ -113,6 +113,7 @@ def add_book():
             "author": request.form.get("author"),
             "book_description": request.form.get("book_description"),
             "created_by": session['user'],
+            "reviews": request.form.get("reviews")
         
         }
 
@@ -135,6 +136,7 @@ def edit_book(book_id):
             "author": request.form.get("author"),
             "book_description": request.form.get("book_description"),
             "created_by": session['user'],
+            "reviews": request.form.get("reviews")
         
         }
 
@@ -144,6 +146,7 @@ def edit_book(book_id):
     book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_book.html", book=book, categories=categories)
+
 
 
 if __name__ == "__main__":
