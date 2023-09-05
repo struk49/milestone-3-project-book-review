@@ -146,12 +146,12 @@ def edit_book(book_id):
     book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_book.html", book=book, categories=categories)
-
+    
 
 @app.route("/delete_book/<book_id>")
 def delete_book(book_id):
     mongo.db.books.delete_one({"_id": ObjectId(book_id)})
-    flash("Book successfully deleted")
+    flash("Book Successfully Deleted")
     return redirect(url_for("home"))
 
 
