@@ -74,12 +74,12 @@ def signin():
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
-                return redirect(url_for("login"))
+                return redirect(url_for("signin"))
 
         else:
             # username doesn't exist
             flash("Incorrect Username and/or Password")
-            return redirect(url_for("login"))
+            return redirect(url_for("signin"))
 
     return render_template("signin.html")
 
@@ -153,6 +153,12 @@ def delete_book(book_id):
     mongo.db.books.delete_one({"_id": ObjectId(book_id)})
     flash("Book Successfully Deleted")
     return redirect(url_for("home"))
+
+
+@app.route("/get_category")
+def get_category():
+    categories = list(mongo.db.categories.find().sort("category_name", 1))
+    return render_template("categories.html", categories=categories)
 
 
 if __name__ == "__main__":
