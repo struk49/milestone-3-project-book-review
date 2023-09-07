@@ -13,11 +13,11 @@
                     <select id="category_name" name="category_name" class="validate" required>
                       <option value="" disabled>Choose Category</option>
                       {% for category in categories %}
-                      {% if category_name == book.category_name %}
-                      <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
-                      {% else %}
-                      <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                      {% endif %}
+                        {% if category_name == book.category_name %}
+                        <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                        {% else %}
+                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endif %}
                       {% endfor %}
                     </select>
                     <label for="category_name">Book Category</label>
@@ -67,7 +67,7 @@
                     Cancel <i class="fa-solid fa-circle-xmark right"></i>
                 </a>
                 <button type="submit" class="btn-large grey darken-4 text-shadow">
-                    EDit Book <i class="fas fa-plus-square right"></i>
+                    EDit Book <i class="fa-solid fa-pen-to-square right></i>
                 </button>
             </div>
         </div>
