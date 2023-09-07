@@ -14,9 +14,7 @@ $(document).ready(function () {
         i18n: {
             done: "Select"
         }
-        $(document).ready(function(){
-            $('.carousel').carousel();
-          });
+       
     });
 
     validateMaterializeSelect();
