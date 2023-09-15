@@ -25,8 +25,8 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/home")
-def home():
+@app.route("/book_list")
+def book_list():
     books = mongo.db.books.find()
     return render_template("books.html", books=books)
 
@@ -119,7 +119,7 @@ def add_book():
 
         mongo.db.books.insert_one(book)
         flash("Book successfully added")
-        return redirect(url_for("home"))
+        return redirect(url_for("book_list"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_book.html",  categories=categories)
@@ -152,7 +152,7 @@ def edit_book(book_id):
 def delete_book(book_id):
     mongo.db.books.delete_one({"_id": ObjectId(book_id)})
     flash("Book Successfully Deleted")
-    return redirect(url_for("home"))
+    return redirect(url_for("book_list"))
 
 
 @app.route("/get_category")

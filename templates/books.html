@@ -7,7 +7,7 @@ center-align "> All Books</h3>
 <ul class="collapsible">
     {% for book in books %}
     <li>
-        <div class="collapsible-header white-text grey darken-2
+        <div class="collapsible-header black-text white
         center-align text-shadow">
         <div class="col s3">
             <i class="fas fa-caret-down"></i>
@@ -26,9 +26,9 @@ center-align "> All Books</h3>
             <p>{{ book.book_description }}</p>
             <p><em> Book added By: {{ book.created_by }}</em></p>
            <br>
-           <h1#>Review </h1>
-            <p>{{- book.reviews }}</p> 
-            <p>{{- book.created_by}}</p>
+           <p>Review </p>
+            <p>{{- book.reviews -}}</p> 
+            <p>{{- book.created_by -}}</p>
     </li>
     {% endfor %}
 </ul>
