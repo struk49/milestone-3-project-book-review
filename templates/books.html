@@ -4,6 +4,24 @@
 <h3 class="white-text deep-orange darken-4
 center-align "> All Books</h3>
 
+<div class="row card-panel grey lighten-5">
+    <form action="{{ url_for('search') }}" method="post" class="col s12">
+        <div class="row valign-wrapper center-align">
+            <div class="input-field col s12 m8">
+                <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
+                <input type="text" name="query" id="query" minlength="3" class="validate" required>
+                <label for="query">Search Books</label>
+            </div>
+            <div class="col s12 m4">
+                <a href="{{ url_for('book_list') }}" class=" grey darken-4 btn text-shadow">Reset</a>
+                <button type="submit" class=" grey darken-4 btn text-shadow">
+                    <i class="fas fa-search left"></i> Search
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
 <ul class="collapsible">
     {% for book in books %}
     <li>
@@ -32,5 +50,6 @@ center-align "> All Books</h3>
     </li>
     {% endfor %}
 </ul>
+
 
 {% endblock %}
