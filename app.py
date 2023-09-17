@@ -25,6 +25,11 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+@app.route("/home")
+def home():
+    return render_template("home.html")
+    
+  
 @app.route("/book_list")
 def book_list():
     books = mongo.db.books.find()
@@ -114,7 +119,6 @@ def add_book():
             "book_description": request.form.get("book_description"),
             "created_by": session['user'],
             "reviews": request.form.get("reviews")
-        
         }
 
         mongo.db.books.insert_one(book)
@@ -137,7 +141,6 @@ def edit_book(book_id):
             "book_description": request.form.get("book_description"),
             "created_by": session['user'],
             "reviews": request.form.get("reviews")
-        
         }
 
         mongo.db.books.update_one({"_id": ObjectId(book_id)}, {"$set": submit})
@@ -146,7 +149,7 @@ def edit_book(book_id):
     book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_book.html", book=book, categories=categories)
-    
+
 
 @app.route("/delete_book/<book_id>")
 def delete_book(book_id):
@@ -180,12 +183,19 @@ def edit_category(category_id):
         submit = {
             "category_name": request.form.get("category_name")
         }
-        mongo.db.categories.update_one({"_id": ObjectId(category_id)}, {"$set": submit })
+        mongo.db.categories.update_one({"_id": ObjectId(category_id)},{"$set": submit})
         flash("Category successfully updated")
         return redirect(url_for('get_category'))
 
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     return render_template("edit_category.html", category=category)
+
+
+@app.route("/delete_category/<category_id>")
+def delete_category(category_id):
+    mongo.db.categories.delete_one({"_id": ObjectId(category_id)})
+    flash("Category successfuly deleted")
+    return redirect(url_for('get_categories'))
 
 
 if __name__ == "__main__":
