@@ -1,56 +1,67 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# h1 Milestone project 3
+## h2 Book Reviews
 
-Welcome,
+## h2 User Experience(UX)
 
-This is the Code Institute student template for the mongo lessons. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## h3 User Stories
+1. As a First Time user, I want to easily understand the main purpose of the site and learn more about how to use the site.
+2. As a first time user, I want to be able to easily navigate around the app and find what i'm looking for.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **April 3rd, 2023**
+## Returning users
+1. I would like to see books added by other readers and see what they think of a book. 
+2. As a returning user i would likie to edit what i wrote about a book. 
+3. I would like the chance to delete a book and add an other one.
 
-## Codeanywhere Reminders
+## h2 Design
+### h3 Colours i have used
 
-# IDE
+1. Dark grey
+2. Dark orange
+3. Brown
+4. white
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose option 4.4 for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password *(will not echo **\*\*\*\*** *on screen)\*
+## h2 Font
+### h3 The app uses the default font the users computer uses. 
 
-#### Clear screen in Mongo Shell:
+## h2 Features
+### h3 Navbar
+> I have useed the navbar from the walk through project.
+> The navbar has a logo which links to the home page.
+> headers which link to signing in and out, registering. 
+> Links for add book, manage categories and profile. 
 
-- `cls`
+Quote break.
 
-#### Show all database collections:
+### h3 o Book
+### h3 on the book list the you can edit or delete a book
 
-- `show collections`
+### h3 Manage categories
+### h3 You can add categories to the app
+### h3 you can also edit categories and also delete them
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+# h1 Technolgies used
+### h3 HTML
+### h3 CSS
+### h3 JavaScript
+### h3 Python
 
-`python3 -m http.server`
+# h1 Frameworks, libraries and programs used
+### h3 Font Awesome
+#### h4 I used font awesome for the icons used in the app
+### h3 Flask
+#### h4 I used flask framework to nuild app
+### h3 mongodb
+#### h4 i used mongodb for non relational database
+### h3 Heroku
+#### i use heroku to deploy the app
+### h3 git
+#### h4 i used git for version control
+### h3 github
+#### h4 i used github to store the repository 
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## h2 I used chrome dev tools to test app. 
+### h3 the app is responsive and works on mobile, laptop, tablet and desktop. 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
----
-
-Happy coding!
