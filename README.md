@@ -112,6 +112,93 @@ Quote break.
 
 ![image](https://github.com/struk49/milestone-3-project-book-review/assets/115653854/2caf3ab5-1f93-41ea-b70e-62684d4a0f20)
 
+### clicked add book 
+
+![image](https://github.com/struk49/milestone-3-project-book-review/assets/115653854/73b216be-79bb-4774-be0a-b2453f1587a6)
+
+### filed out the form with details of book
+![image](https://github.com/struk49/milestone-3-project-book-review/assets/115653854/2d3b7e86-93f6-4e7d-a79a-e7d8322290f3)
+
+### submitted  the book
+![image](https://github.com/struk49/milestone-3-project-book-review/assets/115653854/6881b710-ce22-41dc-afe2-6fba23c76bec)
+
+### checked to see if book has been added
+
+![image](https://github.com/struk49/milestone-3-project-book-review/assets/115653854/594601cf-a141-4b8d-b609-3689178050e0)
+
+### checked to see if book description, author and title has been added
+![image](https://github.com/struk49/milestone-3-project-book-review/assets/115653854/6740466a-3852-4c2a-9aff-eb03a058fc4d)
+
+### clicked edit button
+![image](https://github.com/struk49/milestone-3-project-book-review/assets/115653854/a5068023-87dc-4236-a5ad-5a2224dddb38)
+
+### filled edit form
+![image](https://github.com/struk49/milestone-3-project-book-review/assets/115653854/a54a3222-07f2-48d7-98a6-1ceff08021b7)
+
+### submitted the edit book form
+![image](https://github.com/struk49/milestone-3-project-book-review/assets/115653854/09cc74af-f3b8-4b05-b2ec-b502737ba15a)
+
+### checked book to se if the book has been edited
+![image](https://github.com/struk49/milestone-3-project-book-review/assets/115653854/4e133ee0-bffc-4e2a-b5e4-3c4591d613f3)
+
+> I wanted to see if the delete function worked
+> so i added a fake book to test this
+> the book is learn flask by joe bloggs
+
+![image](https://github.com/struk49/milestone-3-project-book-review/assets/115653854/0154598f-54ce-4ea7-9d65-fc4f0b1028ea)
+
+### book was deleted succesfully
+![image](https://github.com/struk49/milestone-3-project-book-review/assets/115653854/c62f0e2f-4e33-4cc6-82eb-a43651b3b5aa)
+
+### clicked manage categories to see if function worked
+![image](https://github.com/struk49/milestone-3-project-book-review/assets/115653854/3ba5051f-a976-463d-9c52-21ff5a0aa512)
+
+### clicked add category
+![image](https://github.com/struk49/milestone-3-project-book-review/assets/115653854/74d55ae7-4268-4a3b-a6b3-041988068051)
+
+### filled out form to add category
+![image](https://github.com/struk49/milestone-3-project-book-review/assets/115653854/0636497f-6674-48e3-885c-895c954bde55)
+
+### submitted form
+![image](https://github.com/struk49/milestone-3-project-book-review/assets/115653854/9d5394ba-b368-4078-820a-a0d4a869e460)
+
+### loked at categories to see if new category has been added
+![image](https://github.com/struk49/milestone-3-project-book-review/assets/115653854/c6f76072-3aea-4c0d-bd66-d20bbaef0a27)
+
+> i wanted to check to see if edit category function worked
+> i changed codeanywhere to GitHub
+![image](https://github.com/struk49/milestone-3-project-book-review/assets/115653854/b8024f42-1185-48b2-809b-05b0d437a876)
+
+> then i check to see if delete category function worked
+> i deleted the GitHub category
+![image](https://github.com/struk49/milestone-3-project-book-review/assets/115653854/56b84ffc-c096-4c69-9b18-85b6bf18e584)
+
+> I then checked the search function
+> i searched for books with the word king in the title or author
+![image](https://github.com/struk49/milestone-3-project-book-review/assets/115653854/5c876a95-24e3-4e46-9397-c4eaba2cacba)
+
+> result was one book with the author stephen king
+![image](https://github.com/struk49/milestone-3-project-book-review/assets/115653854/75fb9415-7d44-4466-82e0-292c4797c980)
+
+> i searched for the author tolkien
+> two results with the name tolkien
+![image](https://github.com/struk49/milestone-3-project-book-review/assets/115653854/1131c28d-099c-46e0-afdb-ec1f36623dbb)
+
+> i clicked the reset button to see what would happen
+> the reset it self and showed the book list
+<img src="blob:chrome-untrusted://media-app/b78ea277-1749-446d-b423-5bbd831995d0" alt="Screenshot 2023-09-19 11.23.48.png"/>
+
+> i am happy the app functions as the tutor planned. i liked the taskmanager app
+> so much i thought it  would work as a book review site. 
+
+
+
+
+
+
+
+
+
 
 
 
