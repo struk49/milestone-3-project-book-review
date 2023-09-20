@@ -27,7 +27,7 @@ center-align "> All Books</h3>
     <li>
         <div class="collapsible-header black-text white
         center-align text-shadow">
-        <div class="col s3">
+        <div class="col s12 m8">
             <i class="fas fa-caret-down"></i>
             {% if session.user|lower == book.created_by|lower %}
             <a href="{{ url_for('edit_book', book_id=book._id) }}" class="btn-small grey darken-4">Edit</a>
