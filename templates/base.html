@@ -15,7 +15,7 @@
         <!----top navbar---->
         <nav class="nav-extended text-shadow  grey darken-4">
             <div class="nav-wrapper">
-                <a href="{{ url_for('home') }}" class="brand-logo">Book Reviews</a>
+                <a href="{{ url_for('book_list') }}" class="brand-logo">Book Reviews</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fa-solid fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('book_list') }}">Book List</a></li>
@@ -65,12 +65,9 @@
             {% endif %}
             {% endwith %}
         </section>
+        <main class="container">{% block content %} {% endblock %}</main>
         
-        <main class="container">
-            {% block content %}
         
-            {% endblock %}
-        </main>
         
         
         

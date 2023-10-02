@@ -24,12 +24,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-@app.route("/")
-@app.route("/home")
-def home():
-    return render_template("home.html")
-    
-  
+@app.route("/") 
 @app.route("/book_list")
 def book_list():
     books = mongo.db.books.find()

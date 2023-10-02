@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="white-text deep-orange darken-4
-    center-align ">Add Book</h3>
+    <h3 class="white-text pink darken-4
+    center-align">Add Book</h3>
 
- <div class="row card-panel white">
+ <div class="row card-panel">
         <form class="col s12" method="POST" action="{{ url_for('add_book') }}">
             <!---category selection---->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fa-solid fa-folder-open prefix grey-text text darken-4"></i>
+                    <i class="fa-solid fa-folder-open prefix black-text text-black"></i>
                     <select id="category_name" name="category_name" class="validate" required>
                       <option value="" disabled selected>Choose Category</option>
                       {% for category in categories %}
@@ -22,7 +22,7 @@
             <!---book title---->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fa-solid fa-pencil prefix grey-text text darken-4"></i>
+                <i class="fa-solid fa-pencil prefix black-text text darken-4"></i>
             <input id="title" name="title" type="text" maxlength="70" class="validate" required>
             <label for="title">Book Title</label>
             </div>
@@ -30,7 +30,7 @@
         <!---book description---->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fa-solid fa-align-left prefix grey-text text darken-4"></i>
+                <i class="fa-solid fa-align-left prefix black-text text darken-4"></i>
             <textarea id="book_description" name="book_description" minlength="30"
              maxlength="300" class="materialize-textarea validate"required></textarea>
             <label for="book_description">Book Description</label>
@@ -39,14 +39,14 @@
         <!---author---->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fa-solid fa-pencil prefix grey-text text darken-4"></i>
+                <i class="fa-solid fa-pencil prefix black-text text darken-4"></i>
             <input id="author" name="author" type="text" maxlength="20" class="validate" required>
             <label for="author">Author</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <i class="fa-solid fa-align-left prefix grey-text text darken-4"></i>
+                <i class="fa-solid fa-align-left prefix black-text textdarken-4"></i>
             <textarea id="reviews" name="reviews" minlength="30"
              maxlength="500" class="materialize-textarea validate"required></textarea>
             <label for="reviews">Review</label>

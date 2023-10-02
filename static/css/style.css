@@ -1,7 +1,7 @@
-
-body{
-    background-image: url(https://images.unsplash.com/photo-1524578271613-d550eacf6090?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=8);
+body {
+    background-color: rgb(65, 30, 30);
 }
+
 .text-shadow
 {
     text-shadow: 2px 2px 2px rgba(o, 0, 0, 0.5);
@@ -9,6 +9,7 @@ body{
 
 .flashes h4{
     line-height: 2;
+
 }
 
 .btn-small{
@@ -18,17 +19,17 @@ body{
 .collapsible-header .col strong
 {
     margin: 5px;
-    line-height: 25px;
+    line-height: 42px;
 }
 
 p {
-    font-size: 20px
+    font-size: 16px
 }
 
 strong{
-    font-size: 25px;
+    font-size: 16px;
 }
 
 .em{
-    font-size:20px
+    font-size:16px
 }
